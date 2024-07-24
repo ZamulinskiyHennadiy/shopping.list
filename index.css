@@ -178,11 +178,6 @@ li {
   
 }
 
-li:has(input[type="checkbox"]:checked) p{
-  color : var(--li-focus-color);
-  text-decoration-line: line-through;
-}
-
 li:nth-child(odd) {
   background: var(--li-first-color);
 }
@@ -197,4 +192,9 @@ li:hover, li.focus, li:has(input:focus) {
 
 span {
   font-size: 11px;
+}
+
+:checked~*{
+text-decoration: line-through;
+color : var(--li-focus-color)
 }
